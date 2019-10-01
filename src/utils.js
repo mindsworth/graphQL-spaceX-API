@@ -34,10 +34,10 @@ export const createStore = () => {
 		$in: Op.in
 	}
 
+	// @ts-ignore
 	const db = new SQL('database', 'username', 'password', {
 		dialect: 'sqlite',
 		storage: './store.sqlite',
-		operatorsAliases,
 		logging: false
 	})
 

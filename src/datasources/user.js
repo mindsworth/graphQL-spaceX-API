@@ -22,7 +22,7 @@ class UserAPI extends DataSource {
 	 * have to be. If the user is already on the context, it will use that user
 	 * instead
 	 */
-	async findOrCreateUser({ email: emailArg = "" } = {}) {
+	async findOrCreateUser({ email: emailArg = null } = {}) {
 		const email =
 			this.context && this.context.user
 				? this.context.user.email
