@@ -2,7 +2,7 @@ import { paginateResults } from '../utils'
 
 const resolvers = {
 	Query: {
-		launches: async (_, { pageSize = 20, after }, { dataSources }) => {
+		launches: async (_, { pageSize = 10, after }, { dataSources }) => {
 			const allLaunches = await dataSources.launchAPI.getAllLaunches()
 			// we want these in reverse chronological order
 			allLaunches.reverse()
